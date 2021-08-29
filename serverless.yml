@@ -1,10 +1,11 @@
-service: store-play-autodeploy
+service: store-play-task3-cloud
 
 frameworkVersion: '2'
 
 provider:
   name: aws
   runtime: nodejs12.x
+  region: eu-west-1
   # setup profile for AWS CLI.
   # profile: node-aws
 
@@ -17,7 +18,7 @@ plugins:
 
 custom:
   client:
-    bucketName: store-play-autodeploy
+    bucketName: store-play-task3-cloud
     distributionFolder: build
   s3BucketName: ${self:custom.client.bucketName}
 
