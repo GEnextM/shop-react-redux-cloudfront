@@ -13,8 +13,12 @@ import PageOrders from "components/pages/PageOrders/PageOrders";
 import PageOrder from "components/pages/PageOrder/PageOrder";
 import PageProductImport from "components/pages/admin/PageProductImport/PageProductImport";
 
-function App() {
+// const savelocalstorage = () => {
+//   localStorage.setItem("authorization_token", "Basic Z2VuZXh0bTpURVNUX1BBU1NXT1JE");
+// }
 
+function App() {
+  React.useEffect(() => { localStorage.setItem('authorization_token', 'Z2VuZXh0bTpURVNUX1BBU1NXT1JE')}, []);
   return (
     <Router>
       <Switch>
